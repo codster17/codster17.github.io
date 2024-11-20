@@ -8,18 +8,18 @@ use yew_router::prelude::*;
 
 #[derive(Clone, Routable, PartialEq)]
 pub enum Route {
-    #[at("/yew-static-site/")]
+    #[at("/")]
     Home,
-    #[at("/yew-static-site/blog")]
+    #[at("/blog")]
     Blog,
-    #[at("/yew-static-site/about")]
+    #[at("/about")]
     About,
-    #[at("/yew-static-site/contact")]
+    #[at("/contact")]
     Contact,
-    #[at("/yew-static-site/post/:id")]
+    #[at("/post/:id")]
     Post { id: String },
     #[not_found]
-    #[at("/yew-static-site/404")]
+    #[at("/404")]
     NotFound,
 }
 
