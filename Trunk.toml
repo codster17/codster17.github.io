@@ -1,0 +1,23 @@
+[build]
+target = "index.html"
+dist = "dist"
+public_url= "/yew-static-site/"
+
+[watch]
+watch = [
+  "./index.html",
+  "src/",
+  "styles/",
+  "images/"
+]
+
+
+
+[[hooks]]
+stage = "pre_build"
+command = "sh"
+# run tailwind build with webpack
+command_arguments = [
+    "-c",
+    "[ ! -d \"./node_modules\" ] && npm i || :; npm run build_css",
+]
