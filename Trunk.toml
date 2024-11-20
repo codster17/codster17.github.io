@@ -1,7 +1,7 @@
 [build]
 target = "index.html"
 dist = "dist"
-public_url= "/"
+public_url= "../"
 
 [watch]
 watch = [
@@ -15,7 +15,7 @@ watch = [
 
 [[hooks]]
 stage = "pre_build"
-command = "sh"
+command = "sh" 
 # run tailwind build with webpack
 command_arguments = [
     "-c",
